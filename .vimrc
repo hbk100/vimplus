@@ -197,50 +197,60 @@ endfunc
 autocmd BufNewFile * normal G
 
 " Vundle
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+
+
 filetype off        
+call plug#begin('~/.vim/plugged')  
+ "以安装ycm插件为例  
+Plug 'Valloric/YouCompleteMe'  
+  
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+
 " vundle 管理的插件列表必须位于vundle#begin()和vundle#end()之间
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'L9'
-Plugin 'chxuan/change-colorscheme'
-Plugin 'Yggdroot/indentLine'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'haya14busa/incsearch.vim'
-Plugin 'wsdjeg/FlyGrep.vim'
-Plugin 'iamcco/mathjax-support-for-mkdp'
-Plugin 'iamcco/markdown-preview.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'rkulla/pydiction'
-Plugin 'Valloric/MatchTagAlways'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'docunext/closetag.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-endwise'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-scripts/a.vim'
-Plugin 'vim-scripts/DoxygenToolkit.vim'
-Plugin 'vim-scripts/txt.vim'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'gorodinskiy/vim-coloresque'
-Plugin 'will133/vim-dirdiff'
-Plugin 'mhinz/vim-startify'
-Plugin 'junegunn/vim-slash'
+Plug 'VundleVim/Vundle.vim'
+Plug 'L9'
+Plug 'chxuan/change-colorscheme'
+Plug 'Yggdroot/indentLine'
+Plug 'easymotion/vim-easymotion'
+Plug 'haya14busa/incsearch.vim'
+Plug 'wsdjeg/FlyGrep.vim'
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'rkulla/pydiction'
+Plug 'Valloric/MatchTagAlways'
+Plug 'Valloric/YouCompleteMe'
+Plug 'docunext/closetag.vim'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-endwise'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/a.vim'
+Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'vim-scripts/txt.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'will133/vim-dirdiff'
+Plug 'mhinz/vim-startify'
+Plug 'junegunn/vim-slash'
+" Initialize plugin system  
+call plug#end()  
+" call vundle#end()            
 
-call vundle#end()            
+
 filetype plugin indent on    
 
 " load vim default plugin
