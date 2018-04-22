@@ -146,6 +146,9 @@ function install_fonts_on_linux()
 function clone_vundle()
 {
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    mkdir ~/.vim/autoload/  
+    cd ~/.vim/autoload/  
+    wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 # 安装vim插件
