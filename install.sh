@@ -154,7 +154,7 @@ function clone_vundle()
 # 安装vim插件
 function install_vim_plugin()
 {
-    vim -c "PluginInstall" -c "q" -c "q"
+    vim -c "PlugInstall" -c "q" -c "q"
 }
 
 # 在mac平台编译ycm插件
